@@ -9,7 +9,6 @@ function CallFn({ fn }) {
         [
           {
             method: 'from',
-            target: child => child,
             duration: 0.01,
             args: [{ onComplete: fn }],
           },

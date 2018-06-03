@@ -11,7 +11,6 @@ function FromTop(props) {
         [
           {
             method: 'from',
-            target: child => child,
             duration: 0.5,
             args: [{
               y: '-20%', opacity: 0, ease: Power2.easeOut,

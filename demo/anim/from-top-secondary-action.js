@@ -12,7 +12,6 @@ function FromTopSecondaryAction(props) {
         [
           {
             method: 'from',
-            target: child => child,
             duration: 0.6,
             args: [{
               y: '-20%', opacity: 0, ease: Power2.easeOut,

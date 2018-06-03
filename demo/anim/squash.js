@@ -11,7 +11,6 @@ function Squash(props) {
         [
           {
             method: 'to',
-            target: child => child,
             duration: 1.0,
             args: [{
               scaleX: 1.25, scaleY: 0.75, y: '8%', ease: Power2.easeOut,
@@ -19,7 +18,6 @@ function Squash(props) {
           },
           {
             method: 'to',
-            target: child => child,
             duration: 2.0,
             args: [{
               scaleX: 1.0, scaleY: 1.0, y: '0%', ease: Elastic.easeOut.config(1, 0.2),

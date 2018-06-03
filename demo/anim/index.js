@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import Letterwave from './letterwave';
 import CallFn from './call-fn';
-import Anticipation from './anticipation';
 import FollowThrough from './follow-through';
 import Squash from './squash';
 import Stretch from './stretch';
@@ -15,7 +14,6 @@ import CrazyEase from './crazy-ease';
 export {
   Letterwave,
   CallFn,
-  Anticipation,
   FollowThrough,
   Squash,
   Stretch,

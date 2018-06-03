@@ -11,7 +11,6 @@ function Stretch(props) {
         [
           {
             method: 'to',
-            target: child => child,
             duration: 1.0,
             args: [{
               scaleX: 0.8, scaleY: 1.4, y: props.fromBottom ? '-12%' : '12%', ease: Power2.easeOut,
@@ -19,7 +18,6 @@ function Stretch(props) {
           },
           {
             method: 'to',
-            target: child => child,
             duration: 2.0,
             args: [{
               scaleX: 1.0, scaleY: 1.0, y: '0%', ease: Elastic.easeOut.config(1, 0.2),

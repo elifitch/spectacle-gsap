@@ -11,7 +11,6 @@ function FromTopSquashStretch(props) {
         [
           {
             method: 'from',
-            target: child => child,
             duration: 1.0,
             args: [{
               // scaleX: 0.95, scaleY: 1.05, y: '-20%', ease: Elastic.easeOut.config(1, 0.8),
@@ -20,7 +19,6 @@ function FromTopSquashStretch(props) {
           },
           {
             method: 'from',
-            target: child => child,
             duration: 0.6,
             args: [{
               opacity: 0, ease: Power2.easeOut,
