@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Tween from '../../src/index';
 import IB from '../components/inline-block';
 
-require('../lib/CustomEase');
-require('../lib/CustomBounce');
+require('../lib/gsap/CustomEase');
+require('../lib/gsap/CustomBounce');
 
 function CrazyBounce(props) {
   const ease = makeBounce();

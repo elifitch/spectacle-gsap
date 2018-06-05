@@ -4,7 +4,7 @@ import Tween from '../../src/index';
 import IB from '../components/inline-block';
 import SplitWords from '../components/split-words';
 
-require('../lib/Physics2DPlugin');
+require('../lib/gsap/Physics2DPlugin');
 
 function Float(props) {
   const numWords = props.children.split(' ').length;

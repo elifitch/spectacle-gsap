@@ -12,8 +12,8 @@
     "start": "node ./demo/server.js",
     "demo:build": "npm run demo:clean && cross-env NODE_ENV=production webpack -p --config ./demo/webpack.config.js",
     "demo:clean": "rimraf ./demo/dist",
-    "demo:deploy": "gh-pages-deploy",
-    "demo:empty-except-deployables": "del-cli '*' '!bundle.js,!bundle.js.map,!index.html'"
+    "demo:deploy": "gh-pages-deploy '' 'deploying demo'",
+    "demo:empty-except-deployables": "del-cli '*' '!.git' '!.gitignore' '!node_modules/**' '!bundle.js' '!bundle.js.map' '!index.html' --dot"
   },
   "repository": {
     "type": "git",
@@ -79,6 +79,7 @@
   },
   "gh-pages-deploy": {
     "staticpath": "demo/dist",
+    "commit": "deploying demo",
     "prep": [
       "demo:build"
     ],
