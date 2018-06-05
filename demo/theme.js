@@ -14,7 +14,7 @@ export const nearBlack = '#333333';
 export const translucent = 'rgba(0, 0, 80, 0.2)';
 export const islBlue = '#43d8f8';
 
-export const contentWidth = 1400;
+export const contentWidth = 1600;
 export const h1FontSize = '7rem';
 
 export const underline = css`
@@ -72,16 +72,29 @@ mutableTheme = mutableTheme
   })
   .extendComponent(['heading', 'h2'], {
     fontSize: '5rem',
+    lineHeight: '1.2 !important',
     color: purple,
   })
   .extendComponent(['heading', 'h3'], {
     fontSize: '3.5rem',
+    color: purple,
   })
   .extendComponent(['heading', 'h4'], {
     fontSize: '2.5rem',
+    color: purple,
   })
   .extendComponent(['heading', 'h5'], {
     fontSize: '1.75rem',
+    color: purple,
+  })
+  .extendComponent(['heading', 'h6'], {
+    fontSize: '1.4rem',
+    color: purple,
+    marginTop: '2rem',
+  })
+  .extendComponent(['link'], {
+    color: purple,
+    textDecoration: underline,
   });
 
 const theme = JSON.parse(JSON.stringify(mutableTheme));

@@ -10,6 +10,8 @@ import FromTopFollowThroughFun from './from-top-follow-through-fun';
 import FromTopFollowThroughSerious from './from-top-follow-through-serious';
 import FromTopSecondaryAction from './from-top-secondary-action';
 import CrazyEase from './crazy-ease';
+import CrazyBounce from './crazy-bounce';
+import Float from './float';
 
 export {
   Letterwave,
@@ -23,4 +25,6 @@ export {
   FromTopFollowThroughSerious,
   FromTopSecondaryAction,
   CrazyEase,
+  CrazyBounce,
+  Float,
 };
