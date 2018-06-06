@@ -83,7 +83,7 @@
     "staticpath": "demo/dist",
     "commit": "deploying demo",
     "prep": [
-      "demo:build"
+      "demo:build:gsap-plugins"
     ],
     "post": [
       "demo:empty-except-deployables"
