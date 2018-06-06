@@ -1,12 +1,16 @@
+/* eslint-disable global-require, import/no-unresolved */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Tween from '../../src/index';
 import IB from '../components/inline-block';
 
-require('../lib/gsap/CustomEase');
-require('../lib/gsap/CustomBounce');
-
 function CrazyBounce(props) {
+  if (!process.env.GSAP_PLUGINS) {
+    return (
+      <IB>{props.children}</IB>
+    );
+  }
+  
   const ease = makeBounce();
   const fadeArgs = [{ opacity: 0, delay: 0 }];
   const fallArgs = [{ y: -200, delay: 0.5, ease: ease.primary }];

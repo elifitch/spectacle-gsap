@@ -2,6 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const gsapModules = process.env.GSAP_PLUGINS ? {
+  CustomBounce: [path.join(__dirname, 'lib/gsap/CustomBounce.js')],
+  CustomEase: [path.join(__dirname, 'lib/gsap/CustomEase.js')],
+  physics2D: [path.join(__dirname, 'lib/gsap/Physics2DPlugin.js')],
+} : {};
+
 module.exports = {
   devtool: 'cheap-module-source-map',
   entry: [
@@ -24,8 +30,10 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        GSAP_PLUGINS: JSON.stringify(process.env.GSAP_PLUGINS),
       },
     }),
+    new webpack.ProvidePlugin(gsapModules),
   ],
   module: {
     loaders: [

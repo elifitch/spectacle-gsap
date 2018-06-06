@@ -9,8 +9,10 @@
     "build": "babel src -d lib",
     "prepublish": "npm run build",
     "lint": "eslint ./src",
-    "start": "node ./demo/server.js",
+    "demo:start": "node ./demo/server.js",
+    "demo:start:gsap-plugins": "cross-env GSAP_PLUGINS=true npm run demo:start",
     "demo:build": "npm run demo:clean && cross-env NODE_ENV=production webpack -p --config ./demo/webpack.config.js",
+    "demo:build:gsap-plugins": "cross-env GSAP_PLUGINS=true npm run demo:build",
     "demo:clean": "rimraf ./demo/dist",
     "demo:deploy": "gh-pages-deploy '' 'deploying demo'",
     "demo:empty-except-deployables": "del-cli '*' '!.git' '!.gitignore' '!node_modules/**' '!bundle.js' '!bundle.js.map' '!index.html' --dot"

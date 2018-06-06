@@ -1,12 +1,21 @@
+/* eslint-disable global-require, import/no-unresolved */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Tween from '../../src/index';
 import IB from '../components/inline-block';
 import SplitWords from '../components/split-words';
 
-require('../lib/gsap/Physics2DPlugin');
+// if (process.env.GSAP_PLUGINS) {
+//   require('../lib/gsap/Physics2DPlugin');
+// }
 
 function Float(props) {
+  if (!process.env.GSAP_PLUGINS) {
+    return (
+      <IB>{props.children}</IB>
+    );
+  }
+  
   const numWords = props.children.split(' ').length;
   const tweens = [];
   const duration = 3.0;
