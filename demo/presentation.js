@@ -54,25 +54,35 @@ export default class Presentation extends React.Component {
             <Heading size={2}>To <Letterwave>stagger animations</Letterwave></Heading>
           </Slide>
 
-          <Slide>
-            <Heading size={2}>To tap into the GSAP plugin ecosystem</Heading>
-            <Heading size={6}>These cost money, please support the development of GSAP.</Heading>
-          </Slide>
+          {process.env.GSAP_PLUGINS ? (
+            <div>
+              <Slide>
+                <Heading size={2}>To tap into the GSAP plugin ecosystem</Heading>
+                <Heading size={6}>FYI these cost money, please <Link href="https://greensock.com/club" target="_blank">support the development of GSAP</Link>.</Heading>
+              </Slide>
 
-          <Slide>
-            <Heading size={2}>Giving you insanely <FollowThrough>flexible</FollowThrough> <CrazyBounce>easing</CrazyBounce></Heading>
-          </Slide>
+              <Slide>
+                <Heading size={2}>Giving you insanely <FollowThrough>flexible</FollowThrough> <CrazyBounce>easing</CrazyBounce></Heading>
+              </Slide>
 
-          <Slide>
-            <Heading size={2}><Float>Or even some wild physics</Float></Heading>
-          </Slide>
+              <Slide>
+                <Heading size={2}><Float>Or even some wild physics</Float></Heading>
+              </Slide>
+            </div>
+          ) : (
+            <Slide>
+              <Heading size={2}>It even works with GSAP Plugins!</Heading>
+              <Heading size={5}>Check out the <Link href="http://demos.eli.wtf/spectacle-gsap" target="_blank">live demo</Link> to see what they can do for you.</Heading>
+              <Heading size={5}>FYI these cost money, please <Link href="https://greensock.com/club" target="_blank">support the development of GSAP</Link>.</Heading>
+            </Slide>
+          )}
 
           <Slide>
             <Heading size={2}>Spectacle 💖 GSAP,<br />and so will you!</Heading>
           </Slide>
 
           <Slide>
-            <Heading size={2}>👀 me on <Link href="http://github.com">Github 🐙😸</Link></Heading>
+            <Heading size={2}>👀 it on <Link href="http://github.com">Github 🐙😸</Link></Heading>
           </Slide>
         </Deck>
         <Footer />

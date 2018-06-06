@@ -86,6 +86,7 @@ mutableTheme = mutableTheme
   .extendComponent(['heading', 'h5'], {
     fontSize: '1.75rem',
     color: purple,
+    marginTop: '2rem',
   })
   .extendComponent(['heading', 'h6'], {
     fontSize: '1.4rem',
