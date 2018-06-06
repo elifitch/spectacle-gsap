@@ -35,11 +35,11 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Heading size={1}>The most powerful animation framework</Heading>
+            <Heading size={1}>The most powerful<br />animation framework</Heading>
           </Slide>
 
           <Slide>
-            <Heading size={1}>In the most powerful slide deck framework</Heading>
+            <Heading size={1}>Meets the friendliest <Heading size={6}>(or at least reactiest)</Heading> <br />slide deck framework</Heading>
           </Slide>
 
           <Slide bgImage={heMan}>

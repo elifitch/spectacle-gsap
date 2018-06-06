@@ -15,7 +15,7 @@
     "demo:build:gsap-plugins": "cross-env GSAP_PLUGINS=true npm run demo:build",
     "demo:clean": "rimraf ./demo/dist",
     "demo:deploy": "gh-pages-deploy '' 'deploying demo'",
-    "demo:empty-except-deployables": "del-cli '*' '!.git' '!.gitignore' '!node_modules/**' '!bundle.js' '!bundle.js.map' '!index.html' --dot"
+    "demo:empty-except-deployables": "del-cli '*' '!.git' '!.gitignore' '!node_modules/**' '!demo' 'demo/anim' 'demo/assets/' 'demo/components' 'demo/*.js' 'demo/*.html' '!demo/lib/gsap/*.js' '!bundle.js' '!bundle.js.map' '!index.html' --dot"
   },
   "repository": {
     "type": "git",
