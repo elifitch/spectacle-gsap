@@ -55,7 +55,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           {process.env.GSAP_PLUGINS ? (
-            <div>
+            <div hasSlideChildren>
               <Slide>
                 <Heading size={2}>To tap into the GSAP plugin ecosystem</Heading>
                 <Heading size={6}>FYI these cost money, please <Link href="https://greensock.com/club" target="_blank">support the development of GSAP</Link>.</Heading>
@@ -82,7 +82,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Heading size={2}>👀 it on <Link href="http://github.com">Github 🐙😸</Link></Heading>
+            <Heading size={2}>👀 it on <Link href="http://github.com">Github 🐙😸</Link>.</Heading>
           </Slide>
         </Deck>
         <Footer />

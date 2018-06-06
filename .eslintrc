@@ -68,6 +68,7 @@
     "CSSPlugin": false,
     "ThrowPropsPlugin": false,
     "BezierPlugin": false,
-    "CustomBounce": false
+    "CustomBounce": false,
+    "Physics2DPlugin": false
   }
 }

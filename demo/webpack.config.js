@@ -5,15 +5,29 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const gsapModules = process.env.GSAP_PLUGINS ? {
   CustomBounce: [path.join(__dirname, 'lib/gsap/CustomBounce.js')],
   CustomEase: [path.join(__dirname, 'lib/gsap/CustomEase.js')],
-  physics2D: [path.join(__dirname, 'lib/gsap/Physics2DPlugin.js')],
+  Physics2DPlugin: [path.join(__dirname, 'lib/gsap/Physics2DPlugin.js')],
 } : {};
 
+const developmentEntrypoints = process.env.NODE_ENV === 'production' ? [] : [
+  'webpack-hot-middleware/client',
+  'react-hot-loader/patch',
+];
+
+const productionPlugins = process.env.NODE_ENV === 'production' ? [
+  new webpack.optimize.UglifyJsPlugin({
+    compressor: {
+      warnings: false,
+    },
+  }),
+] : [];
+
+const sourceMap = process.env.NODE_ENV === 'production' ? undefined : 'cheap-module-source-map';
+
 module.exports = {
-  devtool: 'cheap-module-source-map',
+  devtool: sourceMap,
   entry: [
     'babel-polyfill',
-    'webpack-hot-middleware/client',
-    'react-hot-loader/patch',
+    ...developmentEntrypoints,
     './demo/index.js',
   ],
   output: {
@@ -34,6 +48,7 @@ module.exports = {
       },
     }),
     new webpack.ProvidePlugin(gsapModules),
+    ...productionPlugins,
   ],
   module: {
     loaders: [

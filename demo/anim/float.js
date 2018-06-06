@@ -5,10 +5,6 @@ import Tween from '../../src/index';
 import IB from '../components/inline-block';
 import SplitWords from '../components/split-words';
 
-// if (process.env.GSAP_PLUGINS) {
-//   require('../lib/gsap/Physics2DPlugin');
-// }
-
 function Float(props) {
   if (!process.env.GSAP_PLUGINS) {
     return (
@@ -16,6 +12,11 @@ function Float(props) {
     );
   }
   
+  /* eslint-disable */
+  // need to access the global variable in order for provide plugin to actually import it
+  const registerModuleForProvidePlugin = Physics2DPlugin;
+  /* eslint-enable */
+
   const numWords = props.children.split(' ').length;
   const tweens = [];
   const duration = 3.0;
