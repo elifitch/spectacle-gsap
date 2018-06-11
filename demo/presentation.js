@@ -13,6 +13,7 @@ import {
   Stretch,
   CrazyBounce,
   Float,
+  Step,
 } from './anim';
 import Footer from './components/footer';
 import heMan from './assets/he-man.gif';
@@ -32,6 +33,15 @@ export default class Presentation extends React.Component {
         >
           <Slide>
             <Heading size={1}>Spectacle GSAP</Heading>
+          </Slide>
+          {/*
+            Fragment animations are cool
+            GSAP is the best animation framework there is
+            It now works with spectacle
+            GSap is cool because now you can do...
+          */}
+          <Slide>
+            <Heading size={1}>Fragment anims are <Step>FUN!</Step></Heading>
           </Slide>
 
           <Slide>

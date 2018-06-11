@@ -12,6 +12,8 @@ import FromTopSecondaryAction from './from-top-secondary-action';
 import CrazyEase from './crazy-ease';
 import CrazyBounce from './crazy-bounce';
 import Float from './float';
+import Step from './step';
+import FromTopFollowThroughCrazy from './from-top-follow-through-crazy';
 
 export {
   Letterwave,
@@ -27,4 +29,6 @@ export {
   CrazyEase,
   CrazyBounce,
   Float,
+  Step,
+  FromTopFollowThroughCrazy,
 };
