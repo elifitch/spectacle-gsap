@@ -14,6 +14,7 @@ import {
   CrazyBounce,
   Float,
   Step,
+  Wobble,
 } from './anim';
 import Footer from './components/footer';
 import heMan from './assets/he-man.gif';
@@ -41,7 +42,11 @@ export default class Presentation extends React.Component {
             GSap is cool because now you can do...
           */}
           <Slide>
-            <Heading size={1}>Fragment anims are <Step>FUN!</Step></Heading>
+            <Heading size={2}>Fragment animations are <Step>FUN!</Step></Heading>
+          </Slide>
+
+          <Slide>
+            <Heading size={1}>But sometimes you need more <Wobble>flexibility</Wobble></Heading>
           </Slide>
 
           <Slide>

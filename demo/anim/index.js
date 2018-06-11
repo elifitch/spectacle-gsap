@@ -14,6 +14,7 @@ import CrazyBounce from './crazy-bounce';
 import Float from './float';
 import Step from './step';
 import FromTopFollowThroughCrazy from './from-top-follow-through-crazy';
+import Wobble from './wobble';
 
 export {
   Letterwave,
@@ -31,4 +32,5 @@ export {
   Float,
   Step,
   FromTopFollowThroughCrazy,
+  Wobble,
 };
